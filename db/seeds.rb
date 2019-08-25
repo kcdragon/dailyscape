@@ -1,7 +1,23 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Create Fake User
+user = User.create!(email: 'test@example.com', password: 'password')
+
+# Create Activity Types
+daily = ActivityType.create!({ name: 'daily' })
+weekly = ActivityType.create!({ name: 'weekly' })
+monthly = ActivityType.create!({ name: 'monthly' })
+
+# Create Activities
+[
+  { name: 'Sinkholes', activity_type: daily },
+  { name: 'Guthixian Cache', activity_type: daily },
+  { name: 'Reaper Task', activity_type: daily },
+  { name: 'Tears of Guthix', activity_type: weekly },
+  { name: 'Skeletal Horror', activity_type: weekly },
+  { name: 'Helping Meg', activity_type: weekly },
+  { name: 'Herby Werby', activity_type: weekly },
+  { name: 'God Statues', activity_type: monthly },
+  { name: 'Giant Oyster', activity_type: monthly },
+  { name: 'Troll Invasion', activity_type: monthly }
+].each do |activity|
+  Activity.create!(activity)
+end

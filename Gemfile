@@ -21,6 +21,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 
 gem 'devise', '4.7.0'
+gem 'haml-rails', '2.0.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
