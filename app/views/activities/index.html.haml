@@ -3,7 +3,6 @@
 = form_with(url: users_activities_path, method: 'post') do
 
   %h2 Daily
-
   %ul
     - @activities_by_type[1].each do |activity|
       %li
@@ -11,7 +10,17 @@
         = label_tag("activity_ids_#{activity.id}", activity.name)
 
   %h2 Weekly
+  %ul
+    - @activities_by_type[2].each do |activity|
+      %li
+        = check_box_tag("activity_ids[]", activity.id, current_user.completed?(activity), id: "activity_ids_#{activity.id}")
+        = label_tag("activity_ids_#{activity.id}", activity.name)
 
   %h2 Monthly
+  %ul
+    - @activities_by_type[3].each do |activity|
+      %li
+        = check_box_tag("activity_ids[]", activity.id, current_user.completed?(activity), id: "activity_ids_#{activity.id}")
+        = label_tag("activity_ids_#{activity.id}", activity.name)
 
   = submit_tag

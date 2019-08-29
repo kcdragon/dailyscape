@@ -1,7 +1,9 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  name: MyString
-
-two:
-  name: MyString
+daily:
+  id: 1
+  name: daily
+weekly:
+  id: 2
+  name: weekly
+monthly:
+  id: 3
+  name: monthly

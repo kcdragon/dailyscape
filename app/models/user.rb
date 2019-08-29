@@ -8,7 +8,6 @@ class User < ApplicationRecord
 
   def completed?(activity)
     user_activity = user_activities.where(activity: activity).order(created_at: :desc).first
-    Rails.logger.info("user_activity #{user_activity}")
     if user_activity
       true
     else

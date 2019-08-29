@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore capybara HTML files
+capybara-*.html
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
