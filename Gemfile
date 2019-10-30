@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 
-gem 'devise', '4.7.0'
+gem 'devise', '4.7.1'
 gem 'haml-rails', '2.0.1'
 
 # Use Active Storage variant
